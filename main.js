@@ -36,16 +36,16 @@
   });
 
   const first = document.getElementById('first');
-  first.addEventListener('click',()=>{
+  first.addEventListener('click', () => {
     let target = 0;
     document.querySelectorAll('.thumbnails > li')[target].click();
   });
 
 
   const next = document.getElementById('next');
-  next.addEventListener('click',()=>{
+  next.addEventListener('click', () => {
     let target = currentIndex + 1;
-    if(target === images.length){
+    if (target === images.length) {
       target = 0;
     }
     document.querySelectorAll('.thumbnails > li')[target].click();
@@ -53,16 +53,16 @@
 
 
   const prev = document.getElementById('prev');
-  prev.addEventListener('click',()=>{
+  prev.addEventListener('click', () => {
     let target = currentIndex - 1;
-    if(target < 0){
+    if (target < 0) {
       target = images.length - 1;
     }
     document.querySelectorAll('.thumbnails > li')[target].click();
   });
 
   const last = document.getElementById('last');
-  last.addEventListener('click',()=>{
+  last.addEventListener('click', () => {
     let target = images.length - 1;
     document.querySelectorAll('.thumbnails > li')[target].click();
   });
@@ -70,21 +70,21 @@
 
   let timeoutId;
 
-  function playSlideshow(){
-    timeoutId = setTimeout(()=>{
+  function playSlideshow() {
+    timeoutId = setTimeout(() => {
       next.click();
       playSlideshow();
-    },1000);
+    }, 1000);
   }
 
   let isPlaying = false;
 
   const play = document.getElementById('play');
-  play.addEventListener('click',()=>{
-    if(isPlaying === false){
+  play.addEventListener('click', () => {
+    if (isPlaying === false) {
       playSlideshow();
       play.textContent = 'Pause';
-    }else{
+    } else {
       clearTimeout(timeoutId);
       play.textContent = 'Play';
     }

@@ -35,6 +35,13 @@
     document.querySelector('.thumbnails').appendChild(li);
   });
 
+  const first = document.getElementById('first');
+  first.addEventListener('click',()=>{
+    let target = 0;
+    document.querySelectorAll('.thumbnails > li')[target].click();
+  });
+
+
   const next = document.getElementById('next');
   next.addEventListener('click',()=>{
     let target = currentIndex + 1;
@@ -53,6 +60,13 @@
     }
     document.querySelectorAll('.thumbnails > li')[target].click();
   });
+
+  const last = document.getElementById('last');
+  last.addEventListener('click',()=>{
+    let target = images.length - 1;
+    document.querySelectorAll('.thumbnails > li')[target].click();
+  });
+
 
   let timeoutId;
 

@@ -1,6 +1,12 @@
 main{
-  width:300px;
+  width:500px;
   margin:0 auto;
+}
+
+.back{
+  width:400px;
+  margin: auto;
+  background: rgb(255, 255, 255);
 }
 
 img{
@@ -14,8 +20,8 @@ ul{
 }
 
 #main{
-  width:300px;
-  height:200px;
+  width:500px;
+  height:333px;
   margin-bottom:8px;
 }
 
@@ -40,25 +46,27 @@ nav li:hover{
 
 nav li{
   border:1px solid #ddd;
+  margin-right: 5px;
 }
 
 #play{
   width:140px;
 }
 
-#prev,#next{
-  width:60px;
+#prev,#next,#first,#last{
+  width:80px;
 }
 
 .thumbnails{
   display:grid;
-  grid-template-columns:repeat(5,56px);
-  gap:5px;
+  grid-template-columns:repeat(5,93px);
+  gap:7px;
 }
 
 .thumbnails li{
   cursor:pointer;
   opacity: 0.4;
+  width:93px;
 }
 
 .thumbnails li:hover,
@@ -67,5 +75,5 @@ nav li{
 }
 
 .thumbnails img{
-  width:56px;
+  width:93px;
 }
